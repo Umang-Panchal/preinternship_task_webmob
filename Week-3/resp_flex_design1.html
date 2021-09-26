@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox design-1</title>
+    <style>
+        body{
+            margin:0
+        }
+.parent-wrapper {
+	height: 100%;
+	width: 100%;
+}
+	.parent {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+	.child {
+	height: 285px;
+    margin: 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: calc(40% - 10px);
+    display: flex;
+    justify-content: center; 
+    align-content: center;
+    align-items: center;
+}
+.design1{
+    border: 2px solid black;
+    height: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+.g_child1{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+    padding: 10px;
+    align-self: flex-start;
+    margin: 10px;
+
+}
+.g_child2{
+     width: 450px;
+    height: 70px;
+    padding: 50px;
+    background-color: lightgoldenrodyellow;
+    margin: 40px;
+    align-self: center;
+}
+.g_child3{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    align-self: flex-end;
+}
+.g_child4{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+}
+ @media only screen and (max-width: 800px) {
+  .parent{
+    display:flex;
+    flex-direction:column;
+    flex: 100%;
+    flex-wrap: nowrap;
+    height: 600px;
+  } 
+
+  
+}
+
+      
+    </style>
+</head>
+<body>
+    <div class="parent-wrapper">
+        <div class="design1">Design 1</div>
+        <div class="parent">
+          <div class="child" style="background-color: lightblue;">
+            <div class="g_child1"><p style="color: white;font-size: 20px;text-align: center;padding-top: 1px">Child</p></div>
+          </div>
+          <div class="child" style="background-color: lightgreen;">
+            <div class="g_child2">
+            </div>
+          </div>
+          <div class="child" style="background-color: lightyellow;">
+            <div class="g_child3"><p style="color: white;font-size: 20px;text-align: center;padding-top: 1px">Child</p></div>
+          </div>
+          <div class="child" style="background-color: lightpink;">
+            <div class="g_child4"><p style="color: white;font-size: 20px;text-align: center;padding-top: 1px">Child</p></div>
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>

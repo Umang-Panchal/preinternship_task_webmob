@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Structure</title>
+    <style>
+table {
+  table-layout: fixed ;  
+  width:100% ;
+  margin:50px 350px 50px 0px;
+
+}
+table,th,td{
+    padding: 15px;  
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: left;
+}
+@media only screen and (max-width:760px),(min-device-width:768px) and (max-device-width: 1024px){
+    
+    table, tbody, th, td, tr { 
+		display: block; 
+	}
+    .pay_to, .customer{
+        display:block;
+        border: none;
+        position: relative;
+        padding: 0;
+    }
+
+	tr th { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc;}
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+        content: attr(data-label);
+        float: left;
+        padding-top: 10px ;
+	}
+}
+
+    </style>
+</head>
+<body>
+<div>
+    <h1 align="center">Table Structure</h1>
+    <table>
+        <tr>
+            <th colspan="3"  class="invoc" style="background-color:#e6e6e6;">Invoice #123456789</th>
+            <th style="background-color:#e6e6e6;" class="date">14 January 2025</th>
+        </tr>
+        <tr>
+            <td colspan="2" class="pay_to">
+                <b>Pay to:</b>
+                <Address>
+                    Acme Billing Co. <br>
+                    123 Main St. <br>
+                    Cityville, NA 12345
+                </Address>
+            </td> 
+            <td colspan="2" class="customer" >
+                <b>Customer:</b>
+                <Address>
+                    John Smith <br>
+                    321 Willow Way <br>
+                    Southeast Northwetershire, MA 54321
+                </Address>
+            </td>
+        </tr>
+        <tr>
+            <th style="background-color:#e6e6e6;">
+                Name/Description
+            </th>
+            <th style="background-color:#e6e6e6;">
+                Qty.
+            </th>
+            <th style="background-color:#e6e6e6;">
+                @
+            </th>
+            <th style="background-color:#e6e6e6;">
+                Cost
+            </th>
+        </tr>
+        <tr>
+            <td data-label="Name/Desc.">Paperclips</td>
+            <td data-label="Qty.">1000</td>
+            <td data-label="@">0.01</td>
+            <td data-label="Cost">10.00</td>
+        </tr>
+        <tr>
+            <td data-label="Name/Desc.">Staples(box)</td>
+            <td data-label="Qty.">100</td>
+            <td data-label="@">1.00</td>
+            <td data-label="Cost">100.00</td>
+        </tr>
+        <tr>
+            <th colspan="3" style="background-color:#e6e6e6;">Subtotal</th>
+            <td data-label="Subtotal">110.0</td>
+        </tr>
+        <tr>
+            <th colspan="2"  style="background-color:#e6e6e6;">Tax</th>
+            <td data-label="Tax Rate">8%</td>
+            <td data-label="Tax Amount">8.80</td>
+        </tr>
+        <tr>
+            <th colspan="3" style="background-color:#e6e6e6;">Grand Total</th>
+            <td data-label="Grand Total">$ 118.80</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

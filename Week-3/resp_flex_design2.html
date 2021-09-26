@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Design-2</title>
+    <style>
+        body{
+            margin:0
+        }
+.parent-wrapper {
+	height: 100%;
+	width: 100%;
+
+}
+	.parent {
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 0;
+    flex-direction: column;
+    
+}
+	.child {
+	height: 187px;
+    margin: 0;	    
+}
+.design2{
+    border: 2px solid black;
+    height: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+.g_class1{
+  margin-top: 10px;  
+}
+input{
+    width: 500px;
+    height: 35px;
+    border-radius:10px;
+}
+button{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
+.b1,.b2,.b3,.b4{
+    width: 60px;
+    height:60px;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+}
+
+.c{
+    width:60px;
+    height: 60px;
+    background-color: lightblue;
+    padding: 10px;
+    margin:  20px;
+}
+@media only screen and (max-width: 800px) {
+  .parent{
+    display:flex;
+    flex-direction:column;
+    flex: 100%;
+    flex-wrap: nowrap;
+    height: 550px;
+  } 
+  input{
+      width: 190px;
+  }
+  button{
+      width: 60px;
+  }
+}
+      
+    </style>
+</head>
+<body>
+    <div class="parent-wrapper">
+        <div class="design2">Design 2</div>
+        <div class="parent">
+          <div class="child" style="background-color: #ff7442;display:flex;justify-content:space-around;">
+            <div class="g_class1">
+                <input type="search" name="search" id="search" placeholder="Search Text!!"/>
+                <button>Search</button>
+                
+            </div>
+          </div>
+          <div class="child" style="background-color: #f8f8f8ea;display: flex;flex-direction: column;justify-content:space-between;margin: 5px;flex-wrap: wrap;">
+                <div style="display: flex;justify-content: flex-start;">
+                    <div class="b1"><p>B1</p></div>
+                </div>
+                <div style="display: flex;justify-content: flex-start;">
+                    <div class="b2"><p>B3</p></div>
+                </div>
+                
+                <div style="display: flex;justify-content: flex-end;">
+                    <div class="b3"><p>B2</p></div>
+                </div>
+                <div style="display: flex;justify-content: flex-end;">
+                    <div class="b4"><p>B4</p></div>
+                </div>
+                
+          </div>
+          <div class="child" style="background-color: #0eb10e;display: flex;flex-direction: row;justify-content: center;align-items: center;">
+                <div class="c"><p style="text-align: center;padding-top: 5px;">C1</p></div>
+                <div class="c"><p style="text-align: center;padding-top: 5px;">C2</p></div>
+                <div class="c"><p style="text-align: center;padding-top: 5px;">C3</p></div>
+          </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
