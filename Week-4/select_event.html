@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript select Event</title>
+</head>
+<body>
+    <h2>Select Event</h2>
+    <input type="text" id="text" value="Text Value" onselect="alert('text selected!!');"><br><br>
+    <button onclick="myfunc()">Select content</button>
+    <script>
+        function myfunc(){
+            document.getElementById("text").select();
+        }
+    </script>
+</body>
+</html>

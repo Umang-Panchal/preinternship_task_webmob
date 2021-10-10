@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object</title>
+</head>
+<body>
+    <h2>Javascript Object</h2>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+    <script>
+        const person={
+            fname: "Alex",
+            lname: "Modi",
+            age: 75,
+            city: "Ahmedabad",
+            state: "Gujarat",
+            country: "India"
+        };
+        //displaying object using object.values() method
+        const inarray=Object.values(person);
+        document.getElementById("demo1").innerHTML="displaying object using object.values() method: "+inarray+"<br><br>";
+
+        //displaying object properties
+        document.getElementById("demo2").innerHTML="<b>Displaying Object Properties:-</b><br>"+"You First Name is: "+person.fname+"<br>"+"Your Last Name is: "+person.lname+"<br>"+"Your Age is: "+person.age+"<br>"+"Your City is: "+person.city+"<br>"+"Your State is: "+person.state+"<br>"+"Your Country is: "+person.country+"<br><br>";
+
+        //displaying using for loop
+        let txt="";
+        for(let x in person){
+            txt+=person[x]+", ";
+        };
+        document.getElementById("demo3").innerHTML="<b>Displaying Using for Loop:-</b><br>"+txt+"<br><br>";
+    </script>
+</body>
+</html>

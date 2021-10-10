@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript onclick Event</title>
+</head>
+<body>
+    <h2>onclick Event</h2>
+    <p id="test">click Me!!!</p> <br>
+    <script>
+        document.getElementById("test").addEventListener("click",func);
+        document.getElementById("test").addEventListener("click",func1);
+        function func(){
+            document.getElementById("test").innerHTML="You clicked me!!";
+        }
+        function func1(){
+            document.getElementById("test").style.fontSize="40px";
+            document.getElementById("test").style.color="red";
+        }
+    </script>
+</body>
+</html>

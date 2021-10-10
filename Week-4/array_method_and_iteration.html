@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods and iteration</title>
+</head>
+<body>
+    <h2>Array Method and iteration</h2>
+    <script>
+        const fruit=["Banana","Mango","Kiwi","Apple"];
+        const veg=["Peas","Cabbage","Onion","Potato","Radish"];
+        const dish=["Samosa","Vadapav","Dosa"];
+        const num=[32,33,17,50];
+        const car=["toyota","BMW","Audi"];
+        const ab=["helo","hi"];
+        document.write("<b>Array1:</b> "+fruit+" ");
+        document.write("<b>Array2:</b> "+veg+" ");
+        document.write("<b>Array3:</b> "+dish+"<br><br>");
+        document.write("concat Method: "+fruit.concat(veg,dish)+"<br><br>");
+        document.write("copyWithin Method: "+fruit.copyWithin(2,0)+"<br><br>");
+        const f=veg.entries();
+        document.write("entries Metohd: ");
+        for(let x of f){
+            document.write(x+" ");
+        }
+        document.write("<br><br>");
+        document.write("every Method: "+num.every(func)+"<br><br>");
+        document.write("fill Method: "+ab.fill("bye ")+"<br><br>");
+        document.write("filter Method: "+num.filter(func)+"<br><br>");
+        document.write("find Method: "+num.find(func)+"<br><br>");
+        document.write("findIndex Method: "+num.findIndex(func)+"<br><br>");
+        let sum=0;
+        num.forEach(myfunc);
+        function myfunc(item) {
+            sum+=item;
+        }
+        document.write("forEach Metohd: "+sum+"<br><br>");
+        document.write("from Method: "+Array.from("qwerty")+"<br><br>");
+        document.write("is Array2 include Peas??(includes Method): "+veg.includes("Peas")+"<br><br>");
+        document.write("index of dosa in Array3(indexOf Method): "+dish.indexOf("Dosa")+"<br><br>");
+        document.write("is Array3 is Array??(isArray Method): "+Array.isArray(dish)+"<br><br>");
+        document.write("join Method: "+fruit.join("/ ")+"<br><br>");
+        const key=veg.keys();
+        document.write("keys Metohd: ");
+        for(let x of key){
+            document.write(x+" ");
+        }
+        document.write("<br><br>");
+        document.write("lastIndexOf mango in Array1(lastIndexOf Method): "+fruit.lastIndexOf("Mango")+"<br><br>");
+        document.write("map Method: "+num.map(Math.sqrt)+"<br><br>");
+        dish.push("Idli");
+        document.write("push Method: "+dish+"<br><br>");
+        dish.pop("Idli");
+        document.write("pop Method: "+dish+"<br><br>");
+        document.write("reduce Method: "+num.reduce(myreducer)+"<br><br>");
+        document.write("reduceRight Method: "+num.reduceRight(myreducer)+"<br><br>");
+        document.write("reverse Method: "+car.reverse()+"<br><br>");
+        fruit.shift();
+        document.write("shift Method: "+fruit+"<br><br>");
+        const veg1= veg.slice(2,4);
+        document.write("slice Method: "+veg1+"<br><br>");
+        document.write("is there is num greater than 18 in Array(some Method): "+num.some(func)+"<br><br>");  
+        document.write("sort Method: "+car.sort()+"<br><br>");
+        car.splice(1, 1, "Kia", "Hyundai");
+        document.write("splice Method: "+car+"<br><br>");
+        document.write("toString Method: "+dish.toString()+"<br><br>");
+        dish.unshift("Idli","Menduvada");
+        document.write("unshift Method: "+dish+"<br><br>");
+        document.write("valueOf Method: "+fruit.valueOf()+"<br><br>");
+        function myreducer(total,num) {
+            return total-num;
+        }
+        function func(num) {
+            return num>18;
+        }
+    </script>
+</body>
+</html>

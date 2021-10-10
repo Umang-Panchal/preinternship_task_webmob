@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Keyboard Events</h2>
+<input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()" autocomplete="off">
+<p id="test"></p>
+<p id="test1"></p>
+<script>
+function keydownFunction() {
+  document.getElementById("test").innerHTML="Keydown Event Occured!!";
+}
+
+function keyupFunction() {
+  var x= document.getElementById("demo").value;
+  document.getElementById("test1").innerHTML="You Pressed: "+x;
+  document.getElementById("test").innerHTML = "Keyup Event Occured!!";
+}
+
+</script>
+
+</body>
+</html>

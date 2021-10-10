@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods</title>
+</head>
+<body>
+    <h2>String Methods of JavaScript</h2>
+</body>
+</html>
+<script>
+    let x="JavaScript Learning";
+    let y="CSS Learning";
+    let z="The rain in SPAIN stays mainly in the plain";
+    let e="           Web Developer           ";
+    document.write("<b>String1:</b> "+x+  "     <b>String2:</b> "+y+  "<b> String3:</b>  "+z+" <br><br>"); 
+    document.write("charAt Method: "+x.charAt(2)+"<br><br>"); 
+    document.write("charCodeAt Method: "+x.charCodeAt(3)+"<br><br>");
+    document.write("concat Method: "+x.concat(" and "+y)+"<br><br>");
+    document.write("endsWith Learning word??(endsWith Method): "+x.endsWith("Learning")+"<br><br>");
+    document.write("fromCharCode Method: "+String.fromCharCode(72,84,77,76,32,76,101,97,114,110,105,110,103) +"<br><br>");
+    document.write("string1 includes JavaScript word??(includes Method): "+x.includes("JavaScript")+"<br><br>");
+    document.write("string1 have a word \"Script\" at which position??(indexOf Method): "+x.indexOf("Script")+"<br><br>"); 
+    document.write("string1 lastindexof \"a\" at which position??(lastIndexOf Method): "+x.lastIndexOf("a")+"<br><br>"); 
+    document.write("string1 is localCompared with String2??(localCompare Method): "+x.localeCompare(y)+"<br><br>");
+    document.write("match Method: "+z.match(/ain/gi)+"<br><br>"); 
+    document.write("repeat Method: "+x.repeat(3)+"<br><br>"); 
+    document.write("replace Method: "+x.replace("JavaScript","HTML")+"<br><br>"); 
+    document.write("Word found in String1 at(search Method):"+x.search(/ing/i)+"<br><br>");
+    document.write("slice Method on string1: "+x.slice(0,4)+"<br><br>"); 
+    document.write("split method on string2: "+y.split(" ")+"<br><br>");
+    document.write("is string3 starts with word \"The\" (startsWith Method): "+z.startsWith("The")+"<br><br>");
+    document.write("Substr of string3(substr Method): "+z.substr(4,5)+"<br><br>");
+    document.write("Substring of string3(substring Method): "+z.substr(0,8)+"<br><br>");
+    document.write("String2 in lowercase(toLowerCase Method): "+y.toLowerCase()+"<br><br>");
+    document.write("String2 in Uppercase(toUpperCase Method): "+y.toUpperCase()+"<br><br>");
+    document.write("toString Method: "+y.toString()+"<br><br>");
+    document.write("trim Method: "+e.trim()+"<br><br>");
+</script>
