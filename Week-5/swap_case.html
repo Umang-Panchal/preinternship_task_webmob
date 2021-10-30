@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap the case of each character in sentence</title>
+</head>
+
+<body>
+    <h2>Swapping case of letters</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        let string1 = "ThE QuIcK BrOwN FoX";
+        document.getElementById("demo1").innerHTML = "<b>Before Character Swapping: </b>" + string1;
+        let new_string = "";
+        for (i = 0; i < string1.length; i++) {
+            if (string1[i] === string1[i].toLowerCase()) {
+                new_string += string1[i].toUpperCase();
+            } else {
+                new_string += string1[i].toLowerCase();
+            }
+        }
+
+        document.getElementById("demo2").innerHTML = "<b>After Character Swapping: </b>" + new_string;
+    </script>
+</body>
+
+</html>

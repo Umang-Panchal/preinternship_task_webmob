@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Letter Capitalizing</title>
+</head>
+
+<body>
+    <h2>Capitalize First letter of word</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        const string1 = "write a program to capitalize first letter of word!!";
+        document.getElementById("demo1").innerHTML = "<b>Before Capitalizing: </b>" + string1;
+        const split_str = string1.split(" ");
+        for (let i = 0; i < split_str.length; i++) {
+            split_str[i] = split_str[i][0].toUpperCase() + split_str[i].substring(1);
+        }
+        document.getElementById("demo2").innerHTML = "<b>After Capitalizing: </b>" + split_str.join(" ");
+    </script>
+</body>
+
+</html>

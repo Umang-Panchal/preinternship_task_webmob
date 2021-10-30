@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing Day and Time</title>
+</head>
+
+<body>
+    <h2>Current Day and Time</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        var today = new Date();
+        var d = today.getDay();
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
+        document.getElementById("demo1").innerHTML="<b>Today is :</b> " + days[d] + ".";
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var pmam = (h >= 12) ? " PM " : " AM ";
+        h = (h >= 12) ? h - 12 : h;
+        if (h === 0 && pmam === ' PM ') {
+            if (m === 0 && s === 0) {
+                h = 12;
+                pmam = ' Noon';
+            } else {
+                h = 12;
+                pmam = ' PM';
+            }
+        }
+        if (h === 0 && pmam === ' AM ') {
+            if (m === 0 && s === 0) {
+                h = 12;
+                pmam = ' Midnight';
+            } else {
+                h = 12;
+                pmam = ' AM';
+            }
+        }
+        document.getElementById("demo2").innerHTML= "<b>Current Time :</b> " + h + pmam + " : " + m + " : " + s;
+    </script>
+</body>
+
+</html>

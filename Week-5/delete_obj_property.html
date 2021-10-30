@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleting Object Property in javascript </title>
+</head>
+
+<body>
+    <h2>Deleting Object Property</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        var student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+        var output1 = "";
+        var output2 = "";
+
+        for (var property in student) {
+            output1 += property + ":" + student[property] + ";" + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = "<b>Before Deleting Object Property:</b> <br><br>" + output1;
+
+        delete student.rollno;
+        for (var property in student) {
+            output2 += property + ":" + student[property] + ";" + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = "<b>After Deleting Object Property:</b> <br><br>" + output2;
+    </script>
+</body>
+
+</html>

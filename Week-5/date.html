@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date in Various Format</title>
+</head>
+
+<body>
+    <h2>Date in Various Format</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        var c_date = new Date();
+        var d = c_date.getDate();
+        var m = c_date.getMonth() + 1;
+        var y = c_date.getFullYear();
+        if (d < 10) {
+            dd = "0" + d;
+        }
+        if (m < 10) {
+            m = "0" + m;
+        }
+
+        document.getElementById("demo1").innerHTML = m + '-' + d + '-' + y;
+        document.getElementById("demo2").innerHTML = d + '/' + m + '/' + y;
+        document.getElementById("demo3").innerHTML = d + '-' + m + '-' + y;
+        document.getElementById("demo4").innerHTML = m + '/' + d + '/' + y;
+        document.getElementById("demo5").innerHTML = y + '-' + m + '-' + d;
+        document.getElementById("demo6").innerHTML = y + '/' + m + '/' + d;
+    </script>
+</body>
+
+</html>
