@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript dblclick Event</title>
+</head>
+<body>
+    <h2>dblclick Event using Event Listener</h2>
+    <p id="test">Double click Me!!!</p> <br>
+    <script>
+        document.getElementById("test").addEventListener("dblclick",func);
+        document.getElementById("test").addEventListener("dblclick",func1);
+        function func(){
+            document.getElementById("test").innerHTML="You Double clicked me!!";
+        }
+        function func1(){
+            document.getElementById("test").style.fontSize="50px";
+            document.getElementById("test").style.color="green";
+        }
+    </script>
+</body>
+</html>

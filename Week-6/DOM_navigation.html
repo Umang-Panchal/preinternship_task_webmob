@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigation</title>
+</head>
+<body>
+    <h2>Navigating Between Nodes</h2>
+    <div id="parent"><h1 id="id01">This is Heading</h1>
+        <h2 id="id02">This is Second Heading</h2>
+        <p>This is Paragraph</p>
+    </div>
+</body>
+</html>
+<script>
+    const element=document.getElementById("parent").firstChild;
+    document.write("firstChild method:  "+element+"<br><br>");
+    document.write("firstChild method with nodeName:  "+element.nodeName+"<br><br>");
+    document.write("firstElementChild method:  "+document.getElementById("parent").firstElementChild+"<br><br>");
+    document.write("firstElementChild method with nodeName:  "+document.getElementById("parent").firstElementChild.nodeName+"<br><br>");
+    document.write("lastChild method:  "+document.getElementById("parent").lastChild+"<br><br>");
+    document.write("lastElementChild method with nodeName:  "+document.getElementById("parent").lastElementChild.nodeName+"<br><br>");
+
+    const element1=document.getElementById("parent");
+    document.write("All Child Node of Div tag is: ");
+    for(let i=0;i<element1.childNodes.length;i++){
+        document.write(element1.childNodes[i].nodeName+" ");
+    }
+    document.write("<br><br>");
+    document.write("parentNode Method: "+element1.parentNode.nodeName+"<br><br>");
+    document.write("parentElement Method: "+element1.parentElement.nodeName+"<br><br>");
+    
+    document.write("nextSibling Method: "+document.getElementById("id01").nextSibling.nodeName+"<br><br>");
+    document.write("nextElementSibling Method: "+document.getElementById("id01").nextElementSibling.nodeName+"<br><br>");
+
+    document.write("previousSibling Method: "+document.getElementById("id02").previousSibling.nodeName+"<br><br>");
+    document.write("previousElementSibling Method: "+document.getElementById("id02").previousElementSibling.nodeName+"<br><br>");
+
+    document.write("nodeValue method:  "+document.getElementById("id01").firstChild.nodeValue+"<br><br>");
+    
+    document.write("nodeType method:  "+document.getElementById("id01").nodeType+"<br><br>");
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM collection</title>
+</head>
+<body>
+    <h1>DOM collection</h1>
+    <h2>This is Heading2</h2>
+    <p>This paragraph1</p>
+    <p>This paragraph2</p>
+    <p>This paragraph3</p>
+    <div id="personal"><span name="title">Dr.</span>
+        <span name="firstname">John</span>
+        <span name="lastname">Doe</span>
+    </div><br>
+    <form id="myform">
+        <input type="text" value="myform">
+        <input type="submit" value="submit"><br><br>
+    </form>
+    <script>
+        const coll=document.getElementsByTagName("p");
+        document.write("HTML collection: "+coll[2].innerHTML+"<br><br>");
+        document.write("All paragraph Element in HTMLcollection with length method: <br> ");
+        for(let i=0;i<coll.length;i++){
+            document.write(coll[i].innerHTML+"<br>");
+        }
+        form_element=document.forms.item(0).nodeName;
+        document.write("<br>item method of HTML collection: "+form_element);
+        
+        const cont=document.getElementById("personal").children.namedItem("title");
+        document.write("<br><br>namedItem method of HTML collection: "+cont.firstChild.nodeValue);
+    </script>
+</body>
+</html>

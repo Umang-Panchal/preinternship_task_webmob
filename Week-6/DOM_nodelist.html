@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM nodelist</title>
+</head>
+<body>
+    <h1>DOM nodeList</h1>
+    <h2>This is Heading2</h2>
+    <p>This paragraph1</p>
+    <p>This paragraph2</p>
+    <p>This paragraph3</p>
+</body>
+<script>
+    const mynode = document.querySelectorAll("p");
+    document.write("elemnet at index2 in nodeList: "+mynode[2].firstChild.nodeValue);
+    
+    document.write("<br><br>All paragraph Element in NodeList with length method: ");
+    for(let i=0;i<mynode.length;i++){
+        document.write(mynode[i].firstChild.nodeValue+" ");
+    }
+    document.write("<br><br>");
+    document.write("item method of Nodelist: "+mynode.item(1).firstChild.nodeValue+"<br><br>");
+
+var node = document.createElement("div");
+var kid1 = document.createElement("p");
+var kid2 = document.createTextNode("hey!!");
+var kid3 = document.createElement("span");
+node.appendChild(kid1);
+node.appendChild(kid2);
+node.appendChild(kid3);
+
+var list = node.childNodes;
+document.write("entries method of nodeList: ");
+for(var entry of list.entries()) {
+  document.write(entry);
+}
+document.write("<br><br>");
+
+document.write("values method of nodeList: ");
+for(var entry1 of list.values()) {
+  document.write(entry1.nodeName+" ");
+}
+</script>
+</html>

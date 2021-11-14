@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb on-off</title>
+    <script>
+        function bulbon(){
+            document.getElementById("bulb1").src="bulb-on.png";
+            document.body.style.backgroundColor="white";
+        }
+        function bulboff(){
+            document.getElementById("bulb1").src="bulb-off.png";
+            document.body.style.backgroundColor="#161616";
+        }
+    </script>
+</head>
+<body style="background-color:#161616;">
+    <center>
+    <h1 style="color: rgb(251, 9, 9);">
+        Bulb ON-OFF by mousedown and mouseup event <br> <br>
+    </h1>
+     <br><br><br><br><br>
+        <img src="bulb-off.png" id="bulb1" alt="Bulb off" onmousedown="bulbon()" onmouseup="bulboff()"/>
+    </center>
+</body>
+</html>
