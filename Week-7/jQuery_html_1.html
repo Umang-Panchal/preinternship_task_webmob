@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>jQuery HTML-1</title>
+</head>
+<body>
+    <p id="p1">Text Method</p>
+    <p id="p2"><b>Html</b>Method</p>
+    <p id="p3">CSS method</p>
+    <input type="text" id="inp"/> <br> <br>
+    <a href="www.google.com">attr method</a>
+    <br> <br>
+    <button id="button1">text()</button>
+    <button id="button2">html()</button>
+    <button id="button3">css()</button>
+    <button id="button4">val()</button>
+    <button id="button5">attr()</button>
+    
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                alert("Text:- "+$("#p1").text());
+            });
+            $("#button2").click(function(){
+                alert("HTML:- "+$("#p2").html());
+            });
+            $("#button3").click(function(){
+                $("#p3").css("color","red");
+            });
+            $("#button4").click(function(){
+                alert("value of textbox:- "+$("#inp").val());
+            });
+            $("#button5").click(function(){
+                alert("Link of Tag a:- "+$("a").attr("href"));
+            });
+        });
+    </script>
+</body>
+</html>

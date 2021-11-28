@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>jQuery Traversing-2</title>
+    <style>
+        #div1 *{
+            display: block;
+            margin:10px;
+            padding: 4px;
+            border: 2px solid grey;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" style="width:600px;">
+        <div style="width: 500px;" id="div2">
+            <h1>h1</h1>
+            <p id="p1">p</p>
+            <h2>h2</h2>
+            <p>p</p>
+        </div>
+        <div style="width: 500px;" id="div3">
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <p id="p1">p</p>
+        </div>
+        <div style="width: 500px;" id="div4">
+            <span>span</span>
+            <h3>h3</h3>
+        </div>
+    </div> <br>
+    <button id="b1">first()</button>
+    <button id="b2">last()</button>
+    <button id="b3">eq()</button>
+    <button id="b4">filter()</button>
+    <button id="b5">not()</button>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("div").first().css({"color":"red","border":"2px solid red"});
+                setTimeout(function(){
+                    $("#div1").css("border","white");
+                    $("#div2,#div3,#div4,p,h1,h2,h3,span").css({"color":"grey","border":"2px solid grey"});
+                },1500);
+            });
+            $("#b2").click(function(){
+                $("div").last().css({"color":"red","border":"2px solid red"});
+                setTimeout(function(){
+                    $("#div2,#div3,#div4,p,h1,h2,h3,span").css({"color":"grey","border":"2px solid grey"});
+                },1500);
+            });
+            $("#b3").click(function(){
+                $("p").eq(2).css({"color":"red","border":"2px solid red"});
+                setTimeout(function(){
+                    $("#div2,#div3,#div4,p,h1,h2,h3,span").css({"color":"grey","border":"2px solid grey"});
+                },1500);
+            });
+            $("#b4").click(function(){
+                $("p").filter("#p1").css({"color":"red","border":"2px solid red"});
+                setTimeout(function(){
+                    $("#div2,#div3,#div4,p,h1,h2,h3,span").css({"color":"grey","border":"2px solid grey"});
+                },1500);
+            });
+            $("#b5").click(function(){
+                $("p").not("#p1").css({"color":"red","border":"2px solid red"});
+                setTimeout(function(){
+                    $("#div2,#div3,#div4,p,h1,h2,h3,span").css({"color":"grey","border":"2px solid grey"});
+                },1500);
+            });
+        });
+    </script>
+</body>
+</html>

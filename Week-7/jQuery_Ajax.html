@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>jQuery AJAX</title>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $.ajax({
+                    url: 'selector_3.html',
+                    success: function (data) {
+                        $('#div1').html(data);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <body>
+        <p>Click on the button to load html file:</p>
+
+        <div id="div1" style="width:1000px;height:575px;background-color:yellowgreen;">
+           Load Data here
+        </div>
+        <br>
+        <input type="button" id="b1" value="Load Data" /> 
+    </body>
+
+</html>
+</body>
+
+</html>

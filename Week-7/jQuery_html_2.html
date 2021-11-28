@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>jQuery HTML-2</title>
+    <style>
+        div{
+            background-color: yellow;
+            border: 2px solid red;
+            padding: 20px;
+            height: 150px;
+            width: 500px;
+        }
+        .para{
+            color: green;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="p1">This is</p>
+        <p id="p2">Paragraph.</p>
+        <p id="p3">Hello!!</p>
+
+    </div><br>
+    <button id="b1">append()</button>
+    <button id="b2">prepend()</button>
+    <button id="b3">after()</button>
+    <button id="b4">before()</button>
+    <button id="b5">remove()</button>
+    <button id="b6">empty()</button>
+    <button id="b7">Dimensions of Box</button> <br> <br>
+    <button id="b8">addClass()</button>
+    <button id="b9">removeClass()</button>
+    <button id="b10">toggleClass()</button>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#p1").append(" Paragraph.");
+            });
+            $("#b2").click(function(){
+                $("#p2").prepend("This is ");
+            });
+            $("#b3").click(function(){
+                $("#p2").after("after() method");
+            });
+            $("#b4").click(function(){
+                $("#p2").before("before() method");
+            });
+            $("#b5").click(function(){
+                $("p").remove("#p3");
+            });
+            $("#b6").click(function(){
+                $("div").empty();
+            });
+            $("#b7").click(function(){
+                var width=$("div").width();
+                var height=$("div").height();
+                var iwidth=$("div").innerWidth();
+                var iheight=$("div").innerHeight();
+                var owidth=$("div").outerWidth();
+                var oheight=$("div").outerHeight();
+                alert("width of Box: "+width+"px\n"+"height of Box: "+height+"px\n"+"innerWidth of Box: "+iwidth+"px\n"+"innerHeight of Box: "+iheight+"px\n"+"outerWidth of Box: "+owidth+"px\n"+"outerHeight of Box: "+oheight+"px\n");
+            });
+            $("#b8").click(function(){
+                $("#p1").addClass("para");
+            });
+            $("#b9").click(function(){
+                $("#p1").removeClass("para");
+            });
+            $("#b10").click(function(){
+                $("#p1").toggleClass("para");
+            });
+        });
+    </script>
+</body>
+</html>

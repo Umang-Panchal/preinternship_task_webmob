@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>jQuery Events</title>
+</head>
+
+<body>
+    <p id="p1">click me!!</p>
+    <p id="p2">Double click me!!</p>
+    <p id="p3">Hover mouse over me!!</p>
+    <p id="p4">Hover and out mouse from me!!</p>
+    <p id="p5">Hover and click down on me!!</p>
+    <p id="p6">Hover and click up on me!!</p>
+    <p id="p7">Hover over me!! I am combination of mouseenter and leave method!!!</p>
+    <input type="text" placeholder="input some value" autocomplete="off" id="inp1">
+    <p>Message from input field: <label id="msg"></label></p>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#p1").click(function () {
+            alert("You clicked me!!");
+        });
+        $("#p2").dblclick(function () {
+            alert("You Double clicked me!!");
+        });
+        $("#p3").mouseenter(function () {
+            alert("You Enterred mouse over me!!");
+        });
+        $("#p4").mouseleave(function () {
+            alert("You hoverred and out mouse from me!!");
+        });
+        $("#p5").mousedown(function () {
+            alert("You hoverred and click down me!!");
+        });
+        $("#p6").mouseup(function () {
+            alert("You hoverred and click up me!!");
+        });
+        $("#p7").hover(function () {
+                alert("You Enterred on me!!");
+            },
+            function () {
+                alert("You Leaved me!!");
+            });
+        $("#inp1").on({
+            focus: function () {
+                $(this).css("background-color", "yellow");
+            },
+            blur: function () {
+                $(this).css("background-color", "lightgreen");
+            },
+            keydown: function () {
+                $("#msg").html("Keydown Event Occurred");
+            },
+            keyup: function () {
+                $('#msg').html("Keyup Event occurred: " + $('input:text').val());
+            }
+        });
+    });
+</script>
+
+</html>

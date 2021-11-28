@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>jQuery effect-3</title>
+</head>
+<style>
+    *{
+        color: #ffffff;
+    }
+    body {
+        margin: 0;
+        background-color: thistle;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        top: 0;
+        width: 100%;  
+        font-size: 20px;
+        background-color: #333;
+        
+    }
+    li {
+        float: left;
+        display: block;
+        padding-left: 1px;
+        padding-top: 15px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        text-decoration: none;
+        text-align: center;
+        width: 100px;
+        
+    }
+    a{
+        text-decoration: none;
+    }
+
+    ul>li>ul>li {
+        background-color: #04AA6D;
+    } 
+</style>
+
+<body>
+    <ul id="menu">
+        <li id="menu1"> Home
+            <ul>
+                <li><a href="#">Home1</a></li>
+                <li><a href="#">Home2</a></li>
+                <li><a href="#">Home3</a></li>
+            </ul>
+        </li>
+        <li id="menu2">About us
+            <ul>
+                <li><a href="#">About us1</a></li>
+                <li><a href="#">About us2</a></li>
+                <li><a href="#">About us3</a></li>
+            </ul>
+        </li>
+        <li id="menu3">Contact us
+            <ul>
+                <li><a href="#">Contact us1</a></li>
+                <li><a href="#">Contact us2</a></li>
+                <li><a href="#">Contact us3</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        $(document).ready(function () {
+            $("#menu1,#menu2,#menu3").children("ul").hide();
+            $("#menu1,#menu2,#menu3").hover(function () {
+                $(this).children("ul").slideDown(1000);
+            }, function () {
+                $(this).children("ul").slideUp(1000);
+            });
+        });
+    </script>
+    <h2 style="color: black;">scrollDown and scrollUp method</h2>
+</body>
+
+</html>

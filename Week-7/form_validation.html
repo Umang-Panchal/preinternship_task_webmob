@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Html5 Form Structure</title>
+    <style>
+        fieldset {
+            background-color: #f2f2f2;
+        }
+
+        label {
+            width: 200px;
+            display: inline-block;
+            text-align: right;
+            font-family: "Calibri";
+        }
+
+        input {
+            width: 250px;
+            height: 20px;
+        }
+
+        select {
+            font-family: "Calibri";
+        }
+
+        img {
+            height: 25px;
+            width: 30px;
+        }
+
+        h2 {
+            font-family: "Calibri";
+        }
+
+        h4 {
+            padding-left: 200px;
+        }
+    </style>
+</head>
+
+<body style="margin: auto;max-width:600px;">
+    <form>
+        <fieldset>
+            <h2>Personal Information</h2>
+            <label for="fname">First Name: </label>
+            <input type="text" id="fname" autocomplete="on" aria-required="true">
+            <h4 id="fnamecheck" style="color:red">*Please Enter Your First Name</h4>
+            <br> <br>
+
+            <label for="lname">Last Name: </label>
+            <input type="text" id="lname" autocomplete="on" aria-required="true">
+            <h4 id="lnamecheck" style="color:red">*Please Enter Your Last Name</h4>
+            <br> <br>
+            <label for="dob">Date of Birth: </label>
+            <select name="month" style="width: 74px;height: 25px;" aria-required="true" id="month">
+                <option value="">Month</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <select name="day" style="width: 74px;height: 25px;" aria-required="true" id="day">
+                <option value="">Day</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select name="year" style="width: 74px;height: 25px;" aria-required="true" id="year">
+                <option value="">Year</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+            </select>
+            <img alt="Choose Your Date of Birth in MM/DD/YY Format" src="src/question.png" class="class-to-top"
+                title="Choose Your Date of Birth in MM/DD/YY Format" />
+            <h4 id="dobcheck" style="color:red">*Please Select Your Birthdate</h4>
+            <br> <br>
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" style="width: 230px;height: 25px;" aria-required="true">
+                <option value="">Choose a gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+            <img alt="Choose Your Gender" src="src/question.png" height="23px" width="23px"
+                title="Choose Your Gender" />
+            <h4 id="gencheck" style="color:red">*Please Select Your Gender</h4>
+            <br>
+            <h2>Account Information</h2>
+
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email" autocomplete="off" aria-required="true"
+                aria-describedby="emailid"> <br>
+            <label style="width: 465px;font-size: 15px;" id="emailid">(Your email address will be your username)</label>
+            <h4 id="emailcheck" style="color:red">*Please Enter Your Email Id</h4>
+            <br><br>
+            <label for="retype_email">Re-type Email: </label>
+            <input type="text" name="retype_email" id="retype_email" aria-required="true">
+            <h4 id="reemailcheck" style="color:red">*Please Re-enter Your Email Id</h4>
+            <br><br>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" minlength="8" autocomplete="off" aria-required="true"
+                aria-describedby="pass"> <br>
+            <label style="width: 470px;font-size: 15px;" id="pass">(Min. 8 characters, 1 number, case-sensitive)</label>
+            <h4 id="passcheck" style="color:red">*Please Enter Password</h4>
+            <br><br>
+            <label for="retype_password">Re-type Password: </label>
+            <input type="password" name="retype_password" id="retype_password" minlength="8" autocomplete="off"
+                aria-required="true">
+            <h4 id="repasscheck" style="color:red">*Please Re-enter Your Password</h4>
+            <br><br>
+            <label for="security_question">Security Question: </label>
+            <select name="security_question" id="security_question" style="width: 230px;height: 25px;"
+                aria-required="true">
+                <option value="">Choose a security question</option>
+                <option value="high_school">What high school did you attend?</option>
+                <option value="fav_pet">What is the name of your favorite pet?</option>
+                <option value="born_city">In what city were you born?</option>
+            </select>
+            <img alt="Choose security option for security purpose" src="src/question.png" height="23px" width="23px"
+                title="Choose security option for security purpose" />
+            <h4 id="secuopcheck" style="color:red">*Please Select Security Question</h4>
+            <br><br>
+            <label for="Security_ans">Security Answer: </label>
+            <input type="text" id="security_ans" autocomplete="on" aria-required="true" aria-describedby="sec_ans"> <br>
+            <label style="width: 320px;font-size: 15px;" id="sec_ans">(Not case-sensitive)</label>
+            <h4 id="secuanscheck" style="color:red">*Please Enter Your Security Answer</h4>
+            <br>
+
+            <h2>Contact Information</h2>
+
+            <label for="address">Address: </label>
+            <input type="text" name="address" id="address" autocomplete="on" aria-required="true">
+            <h4 id="addcheck" style="color:red">*Please Enter Your Address</h4>
+            <br><br>
+            <label for="city">City: </label>
+            <input type="text" name="city" id="city" autocomplete="on" aria-required="true">
+            <h4 id="citycheck" style="color:red">*Please Select Your City Name</h4>
+            <br><br>
+
+            <label for="State">State: </label>
+            <select name="State" id="state" style="width: 256px;height: 25px;" aria-required="true">
+                <option value="">Choose a state</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="Maharastra">Maharastra</option>
+                <option value="Madhya_pradesh">Madhya Pradesh</option>
+                <option value="Uttar_pradesh">Uttar Pradesh</option>
+                <option value="rajsthan">Rajsthan</option>
+                <option value="goa">Goa</option>
+            </select>
+            <h4 id="statecheck" style="color:red">*Please Select Your State Name</h4>
+            <br><br>
+
+            <label for="zip">Zip Code:</label>
+            <input type="text" name="zip" id="zip" style="width:100px" pattern="^[0-9]{6}$" autocomplete="on"
+                aria-required="true">
+            <input type="text" value="optional" style="width:100px" disabled>
+            <h4 id="zipcheck" style="color:red">*Please Enter Your Zip Code</h4>
+            <br><br>
+
+            <label for="phone">Phone: </label>
+            <input type="tel" name="phone" id="phone" style="width: 150px;" pattern="^[0-9]{10}$" autocomplete="on"
+                aria-required="true" aria-describedby="phoneno">
+            <img alt="Choose Mobile or Telephone number" src="src/question.png" height="23px" width="23px"
+                title="Choose Mobile or Telephone number" />
+            <select id="mob" style="width: 74px;height: 25px;">
+                <option value="Mobile">Mobile</option>
+                <option value="Telephone">Telephone</option>
+            </select> <br>
+            <label style="width: 325px;font-size: 15px;" id="phoneno">No spaces or dashes</label>
+            <h4 id="phonecheck" style="color:red">*Please Enter Your Phone or Telephone number</h4>
+            <br><br>
+
+            <center><input type="submit" name="Submit" id="submit" value="Submit" style="width: 200px;height: 25px;">
+            </center>
+        </fieldset>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $("#fnamecheck").hide();
+            $("#lnamecheck").hide();
+            $("#dobcheck").hide();
+            $("#gencheck").hide();
+            $("#emailcheck").hide();
+            $("#reemailcheck").hide();
+            $("#passcheck").hide();
+            $("#repasscheck").hide();
+            $("#secuopcheck").hide();
+            $("#secuanscheck").hide();
+            $("#addcheck").hide();
+            $("#citycheck").hide();
+            $("#statecheck").hide();
+            $("#zipcheck").hide();
+            $("#phonecheck").hide();
+
+            let fnameError = true;
+            let lnameError = true;
+            let dobError = true;
+            let genError = true;
+            let emailError = true;
+            let reemailError = true;
+            let passError = true;
+            let repassError = true;
+            let secuopError = true;
+            let secuansError = true;
+            let addError = true;
+            let cityError = true;
+            let stateError = true;
+            let zipError = true;
+            let phoneError = true;
+
+            $("#fname").keyup(function () {
+                validatefname();
+            });
+
+            function validatefname() {
+                if ($("#fname").val().length == "") {
+                    $("#fnamecheck").show();
+                    fnameError = false;
+                    return false;
+                } else {
+                    $("#fnamecheck").hide();
+                }
+            }
+
+            $("#lname").keyup(function () {
+                validatelname();
+            });
+
+            function validatelname() {
+                if ($("#lname").val().length == "") {
+                    $("#lnamecheck").show();
+                    lnameError = false;
+                    return false;
+                } else {
+                    $("#lnamecheck").hide();
+                }
+            }
+
+            $("#month,#day,#year").each(function () {
+                validatedob();
+            });
+
+            function validatedob() {
+                $("#month,#day,#year").change(function () {
+                    var month = $("#month option:selected").val();
+                    var day = $("#day option:selected").val();
+                    var year = $("#year option:selected").val();
+                    if ((month == "") || (day == "") || (year == "")) {
+                        $("#dobcheck").show();
+                        dobError = false;
+                        return false;
+                    } else {
+                        $("#dobcheck").hide();
+                    }
+                });
+            }
+            $("#gender").change(function () {
+                validategender();
+            });
+
+            function validategender() {
+                if ($("#gender option:selected").val() == "") {
+                    $("#gencheck").show();
+                    genError = false;
+                    return false;
+                } else {
+                    $("#gencheck").hide();
+                }
+            }
+
+            $("#email").keyup(function () {
+                validateemail();
+            });
+
+            function validateemail() {
+                if ($("#email").val().length == "") {
+                    $("#emailcheck").show();
+                    emailError = false;
+                    return false;
+                }
+                if (IsEmail(email) == false) {
+                    $("#emaailcheck").show();
+                    $("#emailcheck").html("*Please Enter Right Email Id");
+                    $("#emailcheck").css("color", "red");
+                    emailError = false;
+                    return false;
+                } else {
+                    $("#emailcheck").hide();
+                }
+
+                function IsEmail(email) {
+                    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    var email = $("#email").val();
+                    if (!regex.test(email)) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+            }
+
+            $("#retype_email").keyup(function () {
+                validatereemail();
+            });
+
+            function validatereemail() {
+                if ($("#retype_email").val().length == "") {
+                    $("#reemailcheck").show();
+                    reemailError = false;
+                    return false;
+                }
+                if ($("#retype_email").val() != $("#email").val()) {
+                    $("#reemailcheck").show();
+                    $("#reemailcheck").html("*Email Id didn't match");
+                    $("#reemailcheck").css("color", "red");
+                    reemailError = false;
+                    return false;
+                } else {
+                    $("#reemailcheck").hide();
+                }
+            }
+            $("#password").keyup(function () {
+                validatepass();
+            });
+
+            function validatepass() {
+                if ($("#password").val().length == "") {
+                    $("#passcheck").show();
+                    passError = false;
+                    return false;
+                }
+                if (($("#password").val().length < 3) || ($("#password").val().length > 10)) {
+                    $('#passcheck').show();
+                    $('#passcheck').html("*length of your password must be between 3 and 10");
+                    $('#passcheck').css("color", "red");
+                    passError = false;
+                    return false;
+                } else {
+                    $("#passcheck").hide();
+                }
+            }
+
+            $("#retype_password").keyup(function () {
+                validaterepass();
+            });
+
+            function validaterepass() {
+                if ($("#retype_password").val().length == "") {
+                    $("#repasscheck").show();
+                    repassError = false;
+                    return false;
+                }
+                if ($("#retype_password").val() != $("#password").val()) {
+                    $("#repasscheck").show();
+                    $("#repasscheck").html("*Password didn't match");
+                    $("#repasscheck").css("color", "red");
+                    repassError = false;
+                    return false;
+                } else {
+                    $("#repasscheck").hide();
+                }
+            }
+
+            $("#security_question").change(function () {
+                validatesecuop();
+            });
+
+            function validatesecuop() {
+                if ($("#security_question option:selected").val() == "") {
+                    $("#secuopcheck").show();
+                    secuopError = false;
+                    return false;
+                } else {
+                    $("#secuopcheck").hide();
+                }
+            }
+
+            $("#security_ans").keyup(function () {
+                validatesecuans();
+            });
+
+            function validatesecuans() {
+                if ($("#security_ans").val().length == "") {
+                    $("#secuanscheck").show();
+                    secuansError = false;
+                    return false;
+                } else {
+                    $("#secuanscheck").hide();
+                }
+            }
+
+            $("#address").keyup(function () {
+                validateadd();
+            });
+
+            function validateadd() {
+                if ($("#address").val().length == "") {
+                    $("#addcheck").show();
+                    addError = false;
+                    return false;
+                } else {
+                    $("#addcheck").hide();
+                }
+            }
+            $("#city").keyup(function () {
+                validatecity();
+            });
+
+            function validatecity() {
+                if ($("#city").val().length == "") {
+                    $("#citycheck").show();
+                    cityError = false;
+                    return false;
+                } else {
+                    $("#citycheck").hide();
+                }
+            }
+            $("#state").change(function () {
+                validatestate();
+            });
+
+            function validatestate() {
+                if ($("#state option:selected").val() == "") {
+                    $("#statecheck").show();
+                    stateError = false;
+                    return false;
+                } else {
+                    $("#statecheck").hide();
+                }
+            }
+
+            $("#zip").keyup(function () {
+                validatezip();
+            });
+
+            function validatezip() {
+                if ($("#zip").val().length == "") {
+                    $("#zipcheck").show();
+                    zipError = false;
+                    return false;
+                } else {
+                    $("#zipcheck").hide();
+                }
+            }
+
+            $("#phone").keyup(function () {
+                validatephone();
+            });
+
+            function validatephone() {
+                if ($("#phone").val().length == "") {
+                    $("#phonecheck").show();
+                    phoneError = false;
+                    return false;
+                } else {
+                    $("#phonecheck").hide();
+                }
+            }
+
+            $('#submit').click(function () {
+                validatefname();
+                validatelname();
+                validatedob();
+                validategender();
+                validateemail();
+                validatereemail();
+                validatepass();
+                validaterepass();
+                validatesecuop();
+                validatesecuans();
+                validateadd();
+                validatecity();
+                validatestate();
+                validatezip();
+                validatephone();
+
+                if ((fnameError == true) && (lnameError == true) && (dobError == true) && (genError ==
+                        true) && (emailError == true) && (reemailError == true) && (passError ==
+                        true) && (repassError == true) && (secuopError == true) && (secuansError ==
+                        true) &&
+                    (addError == true) && (cityError == true) && (stateError == true) && (zipError ==
+                        true) && (phoneError == true)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

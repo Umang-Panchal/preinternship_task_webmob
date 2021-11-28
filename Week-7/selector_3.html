@@ -1,0 +1,99 @@
+<html>
+
+<head>
+	<title>jQuery form selector-3</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		div {
+			padding: 12px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>jQuery form selector example</h1>
+
+	<form name="form1" action="#">
+		<div>
+			TextBox : <input type="text" value="This is message from textbox" />
+		</div>
+		<div>
+			Password : <input type="password" value="This is message from password" />
+		</div>
+		<div>
+			TextArea : <textarea>This is message from textarea</textarea>
+		</div>
+		<div>
+			Radio : <input name="radio1" type="radio" value="Male" checked />Male
+			<input name="radio1" type="radio" value="Female" />Female
+		</div>
+		<div>
+			CheckBox : <input type="checkbox" name="checkme" />Check Me!!
+		</div>
+		<div>
+			File : <input type="file" />
+		</div>
+		<div>
+			Hidden : <input type="hidden" value="This is message from hidden" />
+		</div>
+		<div>
+			Country : <select id="country">
+				<option value="India">India</option>
+				<option value="United State">United State</option>
+			</select>
+		</div>
+		<div>
+			<input type="submit"></input> <input type="reset" />
+		</div>
+	</form>
+	<h3>Message = <label id="msg"></label> </h3>
+	<button id="text">input:text</button>
+	<button id="password">input:password</button>
+	<button id="textarea">textarea</button>
+	<button id="radio">input:radio</button>
+	<button id="checkbox">input:checkbox</button>
+	<button id="file">input:file</button>
+	<button id="hidden">input:hidden</button>
+	<button id="select">select</button>
+	<button id="submit">input:submit</button>
+	<button id="reset">input:reset</button>
+
+	<script>
+		$(document).ready(function () {
+
+			$("#text, #password, #hidden, #textarea, #file, #submit, #reset").click(function () {
+				var str = $(this).text();
+				$('input, textarea, select').css("background", "#ffffff");
+				$(str).css("background", "yellow");
+				$('#msg').html($(str).val())
+			});
+
+			$("#radio").click(function () {
+				$('input, textarea, select').css("background", "#ffffff");
+				$('#msg').html($('input:radio[name=radio1]:checked').val());
+			});
+
+			$("#checkbox").click(function () {
+				var str = $(this).text();
+				$('input, textarea, select').css("background", "#ffffff");
+
+				if ($('input:checkbox[name=checkme]').is(':checked')) {
+					$('#msg').html("Checkbox is checked");
+				} else {
+					$('#msg').html("Checkbox is uncheck");
+				}
+			});
+
+			$("#select").click(function () {
+				$('input, textarea, select').css("background", "#ffffff");
+				$('#msg').html($('#country').val());
+			});
+		});
+	</script>
+
+</body>
+
+</html>
